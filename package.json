@@ -1,0 +1,33 @@
+{
+  "name": "readable-timespan",
+  "version": "1.0.0",
+  "description": "Human readable timespans",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aurbano/readable-timespan.git"
+  },
+  "keywords": [
+    "human",
+    "readable",
+    "timespan",
+    "timestamp",
+    "milliseconds",
+    "seconds",
+    "hours",
+    "day"
+  ],
+  "author": "Alejandro U. Alvarez",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/aurbano/readable-timespan/issues"
+  },
+  "homepage": "https://github.com/aurbano/readable-timespan",
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.3.0"
+  }
+}
