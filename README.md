@@ -20,13 +20,13 @@ Display timespans the way we understand them:
 ##Install
 
 ```sh
-$ npm install --save readable-timespans
+$ npm install --save readable-timespan
 ```
 
 ##Usage
 
 ```js
-var timespan = require('readable-timespans');
+var timespan = require('readable-timespan');
 
 console.log("Last seen " + timespan.parse(5 * 60 * 1000) + " ago");
 // Last seen 5 minutes ago
@@ -47,7 +47,7 @@ There are several options you can set:
 * [pluralize]: Whether it should return an 's' at the end when the number is > 1.
 
 ```js
-var timespan = require('readable-timespans');
+var timespan = require('readable-timespan');
 
 timespan.set({
     second: 's',
@@ -70,7 +70,7 @@ You can set it to your language by overriding the names of the units.
 
 For example in Spanish:
 ```js
-var timespan = require('readable-timespans');
+var timespan = require('readable-timespan');
 
 timespan.set({
     second: 'segundo',
