@@ -5,6 +5,7 @@ readable-timespan
 [![Dependency Status](http://img.shields.io/david/aurbano/readable-timespan.svg?style=flat-square)](https://david-dm.org/aurbano/readable-timespan)
 [![npm version](http://img.shields.io/npm/v/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
 [![license](http://img.shields.io/npm/l/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
+[![downloads](https://img.shields.io/npm/dm/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
 
 > npm package to get human readable timespans
 
