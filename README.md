@@ -18,13 +18,13 @@ Display timespans the way we understand them:
 * 8 months
 * ...
 
-##Install
+## Install
 
 ```sh
 $ npm install --save readable-timespan
 ```
 
-##Usage
+## Usage
 
 ```js
 var timespan = require('readable-timespan');
@@ -35,11 +35,11 @@ console.log("Last seen " + timespan.parse(5 * 60 * 1000) + " ago");
 
 The `parse()` method takes one argument: the time difference in milliseconds, and returns the closest unit rounded up.
 
-##Configuration
+## Configuration
 
 There are several settings that can be changed, this allows even localization in your language.
 
-###timespan.set(options)
+### timespan.set(options)
 
 There are several options you can set:
 
@@ -83,7 +83,7 @@ timespan.set({
 ```
 
 
-##Localization
+## Localization
 
 You can set it to your language by overriding the names of the units.
 
