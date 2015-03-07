@@ -50,6 +50,8 @@ There are several options you can set:
 var timespan = require('readable-timespan');
 
 timespan.set({
+    lessThanFirst: 'now',
+    millisecond: 'ms',
     second: 's',
     minute: 'm',
     hour: 'h',
@@ -64,6 +66,22 @@ timespan.set({
 // You will now get 5s instead of 5 seconds, 4m instead of 4 minutes and so on.
 ```
 
+### Disabling units
+
+You can disable any of the units by passing `false` in its settings, for example to disable **milliseconds**:
+
+
+```js
+var timespan = require('readable-timespan');
+
+timespan.set({
+    millisecond: false
+});
+
+// You will now get timespan.parse(50) => 'now' 
+```
+
+
 ##Localization
 
 You can set it to your language by overriding the names of the units.
@@ -73,6 +91,7 @@ For example in Spanish:
 var timespan = require('readable-timespan');
 
 timespan.set({
+    millisecond: 'milisegundo',
     second: 'segundo',
     minute: 'minuto',
     hour: 'hora',
