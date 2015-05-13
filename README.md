@@ -1,8 +1,8 @@
 readable-timespan
 =================
 
-[![Build Status](http://img.shields.io/travis/aurbano/readable-timespan/master.svg?style=flat-square)](https://travis-ci.org/aurbano/readable-timespan)
-[![Dependency Status](http://img.shields.io/david/aurbano/readable-timespan.svg?style=flat-square)](https://david-dm.org/aurbano/readable-timespan)
+[![Build Status](http://img.shields.io/travis/aurbano/node-timespan/master.svg?style=flat-square)](https://travis-ci.org/aurbano/node-timespan)
+[![Dependency Status](http://img.shields.io/david/aurbano/node-timespan.svg?style=flat-square)](https://david-dm.org/aurbano/node-timespan)
 [![npm version](http://img.shields.io/npm/v/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
 [![license](http://img.shields.io/npm/l/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
 [![downloads](https://img.shields.io/npm/dm/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
