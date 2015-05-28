@@ -1,4 +1,4 @@
-readable-timespan
+[readable-timespan](http://urbanoalvarez.es/node-timespan)
 =================
 
 [![Build Status](http://img.shields.io/travis/aurbano/node-timespan/master.svg?style=flat-square)](https://travis-ci.org/aurbano/node-timespan)
