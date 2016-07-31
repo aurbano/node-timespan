@@ -21,16 +21,16 @@
     "day"
   ],
   "author": "Alejandro U. Alvarez",
-  "license": "GPLv2",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/aurbano/readable-timespan/issues"
   },
   "homepage": "https://github.com/aurbano/readable-timespan",
   "devDependencies": {
     "mocha": "^2.0.1",
-    "should": "^4.3.0"
+    "should": "^10.0.0"
   },
   "dependencies": {
-    "extend": "^2.0.0"
+    "extend": "^3.0.0"
   }
 }
