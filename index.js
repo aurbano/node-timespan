@@ -22,7 +22,7 @@ var MILLISECOND = 1,
   MONTH = 30 * DAY,
   YEAR = 365 * DAY;
 
-var settings = {
+var defaultSettings = {
   lessThanFirst: 'now',
   millisecond: 'millisecond',
   second: 'second',
@@ -38,54 +38,54 @@ var settings = {
 };
 
 var readableTimespans = function(opts) {
-  this.set(opts);
-  buildIncrements();
+  this.settings = extend({}, defaultSettings, opts);
+  this.buildIncrements();
 };
 
-function buildIncrements() {
-  settings.increments = [
-    [MILLISECOND, settings.millisecond],
-    [SECOND, settings.second],
-    [MINUTE, settings.minute],
-    [HOUR, settings.hour],
-    [DAY, settings.day],
-    [WEEK, settings.week],
-    [MONTH, settings.month],
-    [YEAR, settings.year]
+readableTimespans.prototype.buildIncrements = function() {
+  this.settings.increments = [
+    [MILLISECOND, this.settings.millisecond],
+    [SECOND, this.settings.second],
+    [MINUTE, this.settings.minute],
+    [HOUR, this.settings.hour],
+    [DAY, this.settings.day],
+    [WEEK, this.settings.week],
+    [MONTH, this.settings.month],
+    [YEAR, this.settings.year]
   ];
 }
 
 readableTimespans.prototype.parse = function(diff) {
   var plural = '',
     space = ' ',
-    units = Math.ceil(diff / settings.increments[settings.increments.length - 1][0]),
-    unit = settings.increments[settings.increments.length - 1][1],
+    units = Math.ceil(diff / this.settings.increments[this.settings.increments.length - 1][0]),
+    unit = this.settings.increments[this.settings.increments.length - 1][1],
     checkValid = 0;
 
   // Handle units smaller than the first increment
-  while (!settings.increments[checkValid][1]) {
+  while (!this.settings.increments[checkValid][1]) {
     checkValid++;
   }
 
-  if (diff < settings.increments[checkValid][0]) {
-    return settings.lessThanFirst;
+  if (diff < this.settings.increments[checkValid][0]) {
+    return this.settings.lessThanFirst;
   }
 
-  for (i = 1; i < settings.increments.length; i++) {
+  for (i = 1; i < this.settings.increments.length; i++) {
 
-    if (!settings.increments[i - 1][1]) continue;
+    if (!this.settings.increments[i - 1][1]) continue;
 
-    if (settings.increments[i - 1][0] <= diff && diff < settings.increments[i][0]) {
-      units = Math.ceil(diff / settings.increments[i - 1][0]);
-      unit = settings.increments[i - 1][1];
+    if (this.settings.increments[i - 1][0] <= diff && diff < this.settings.increments[i][0]) {
+      units = Math.ceil(diff / this.settings.increments[i - 1][0]);
+      unit = this.settings.increments[i - 1][1];
       break;
     }
   }
 
-  if (units > 1 && settings.pluralize) {
+  if (units > 1 && this.settings.pluralize) {
     plural = 's';
   }
-  if (!settings.space) space = '';
+  if (!this.settings.space) space = '';
 
   return units + space + unit + plural;
 }
@@ -94,9 +94,14 @@ readableTimespans.prototype.parse = function(diff) {
  * Set configuration options
  */
 readableTimespans.prototype.set = function(opts) {
-  extend(settings, opts);
+  extend(this.settings, opts);
 
-  buildIncrements();
+  this.buildIncrements();
+};
+
+readableTimespans.prototype.create = function(opts) {
+    var newOpts = extend({}, this.settings, opts);
+    return new readableTimespans(newOpts);
 };
 
 module.exports = new readableTimespans();
