@@ -1,6 +1,6 @@
 {
   "name": "readable-timespan",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Human readable timespans",
   "main": "index.js",
   "scripts": {
