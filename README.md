@@ -109,6 +109,6 @@ timespan.set({
 
 ## License
 
-GPLv2 © [Alejandro U. Alvarez](http://urbanoalvarez.es)
+GPLv3 © [Alejandro U. Alvarez](http://urbanoalvarez.es)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-3181088-16/node-timespan/readme)](https://github.com/aurbano)
