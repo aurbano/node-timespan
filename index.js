@@ -53,7 +53,7 @@ readableTimespans.prototype.buildIncrements = function() {
     [MONTH, this.settings.month],
     [YEAR, this.settings.year]
   ];
-}
+};
 
 readableTimespans.prototype.parse = function(diff) {
   var plural = '',
@@ -88,7 +88,7 @@ readableTimespans.prototype.parse = function(diff) {
   if (!this.settings.space) space = '';
 
   return units + space + unit + plural;
-}
+};
 
 /**
  * Set configuration options

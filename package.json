@@ -4,7 +4,7 @@
   "description": "Human readable timespans",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --recursive"
+    "test": "nyc ava"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/aurbano/readable-timespan",
   "devDependencies": {
-    "mocha": "^2.0.1",
-    "should": "^10.0.0"
+    "ava": "^0.17.0",
+    "nyc": "^10.0.0"
   },
   "dependencies": {
     "extend": "^3.0.0"

@@ -2,7 +2,7 @@
 =================
 
 [![Build Status](http://img.shields.io/travis/aurbano/node-timespan/master.svg?style=flat-square)](https://travis-ci.org/aurbano/node-timespan)
-[![Dependency Status](http://img.shields.io/david/aurbano/node-timespan.svg?style=flat-square)](https://david-dm.org/aurbano/node-timespan)
+[![Coverage Status](https://coveralls.io/repos/github/aurbano/node-timespan/badge.svg?branch=master)](https://coveralls.io/github/aurbano/node-timespan?branch=master)
 [![npm version](http://img.shields.io/npm/v/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
 [![license](http://img.shields.io/npm/l/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
 [![downloads](https://img.shields.io/npm/dm/readable-timespan.svg?style=flat-square)](https://www.npmjs.org/package/readable-timespan)
