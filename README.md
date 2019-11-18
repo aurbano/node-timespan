@@ -27,8 +27,9 @@ $ npm install --save readable-timespan
 ## Usage
 
 ```js
-var timespan = require('readable-timespan');
+import Timespan from 'readable-timespan';
 
+const timespan = new Timespan();
 console.log("Last seen " + timespan.parse(5 * 60 * 1000) + " ago");
 // Last seen 5 minutes ago
 ```
@@ -41,16 +42,16 @@ There are several settings that can be changed, this allows even localization in
 
 ### timespan.set(options)
 
-There are several options you can set:
+There are several options you can set (see examples below):
 
-* [second, minute, hour, week, month, year]: Different strings for unit names.
-* [space]: Whether you want a space or not.
-* [pluralize]: Whether it should return an 's' at the end when the number is > 1.
+* `[second, minute, hour, week, month, year]`: Different strings for unit names.
+* `[space]`: Whether you want a space or not.
+* `[pluralize]`: Whether it should return an 's' at the end when the number is > 1.
 
 ```js
-var timespan = require('readable-timespan');
+import Timespan from 'readable-timespan';
 
-timespan.set({
+const timespan. = new Timespan({
     lessThanFirst: 'now',
     millisecond: 'ms',
     second: 's',
@@ -73,9 +74,9 @@ You can disable any of the units by passing `false` in its settings, for example
 
 
 ```js
-var timespan = require('readable-timespan');
+import Timespan from 'readable-timespan';
 
-timespan.set({
+const timespan. = new Timespan({
     millisecond: false
 });
 
@@ -89,9 +90,9 @@ You can set it to your language by overriding the names of the units.
 
 For example in Spanish:
 ```js
-var timespan = require('readable-timespan');
+import Timespan from 'readable-timespan';
 
-timespan.set({
+const timespan. = new Timespan({
     millisecond: 'milisegundo',
     second: 'segundo',
     minute: 'minuto',
@@ -109,6 +110,6 @@ timespan.set({
 
 ## License
 
-GPLv3 © [Alejandro U. Alvarez](http://urbanoalvarez.es)
+MIT © [Alejandro U. Alvarez](http://urbanoalvarez.es)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-3181088-16/node-timespan/readme)](https://github.com/aurbano)
