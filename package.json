@@ -21,7 +21,7 @@
     "day"
   ],
   "author": "Alejandro U. Alvarez",
-  "license": "GPLv3",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aurbano/readable-timespan/issues"
   },
