@@ -1,7 +1,9 @@
 language: node_js
 sudo: false
+cache: yarn
 node_js:
-  - '6.9.2'
+  - 'node'
+  - 'lts/*'
 
 after_success:
   - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
