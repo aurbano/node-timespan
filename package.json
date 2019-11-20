@@ -3,6 +3,7 @@
   "version": "2.0.1",
   "description": "Human readable timespans",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
